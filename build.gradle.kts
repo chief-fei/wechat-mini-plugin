@@ -78,7 +78,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
 }
 
-version = "3.5.17"
+version = "3.5.18"
 
 tasks {
     withType<JavaCompile> {
@@ -95,21 +95,21 @@ tasks {
         token.set(System.getenv("TOKEN"))
     }
     patchPluginXml {
-        sinceBuild.set("241")
-        untilBuild.set("241.*")
+        sinceBuild.set("243")
+        untilBuild.set("243.*")
         val changeNotes = """
 <ul lang="cn">
-    <li> 兼容2024.1 </li>
+    <li> 兼容2024.3 </li>
 </ul>
 <br/>
 <ul lang="en">
-    <li> Compatible with 2024.1 </li>
+    <li> Compatible with 2024.3 </li>
 </ul>
 """
         val pluginDescription = """
 Support <a href="https://developers.weixin.qq.com/miniprogram/introduction/"> WeChat Mini Program </a> project
 <h3>使用入门</h3>
-<ul> 
+<ul>
     <li>打开微信小程序或QQ小程序项目</li>
     <li>确保project.config.json配置文件存在</li>
     <li>现在您可以使用所有此插件提供的功能</li>
@@ -119,7 +119,7 @@ Support <a href="https://developers.weixin.qq.com/miniprogram/introduction/"> We
     <li>wxml / wxss / wxs文件支持</li>
     <li>创建微信小程序组件和页面</li>
     <li>相关文件导航</li>
-    <li>微信小程序自定义组件支持</li> 
+    <li>微信小程序自定义组件支持</li>
     <li>微信小程序配置文件支持</li>
     <li>代码检查和自动修复</li>
     <li>支持QQ小程序项目 (v3.1.0)</li>
@@ -163,11 +163,11 @@ sourceSets {
 
 intellij {
     type.set("IU")
-    version.set("2024.1")
+    version.set("2024.2")
     pluginName.set("wechat mini program")
     downloadSources.set(true)
     updateSinceUntilBuild.set(false)
-    plugins.set(listOf("JavaScript", "com.intellij.css", "less", "sass", "org.jetbrains.plugins.stylus:241.14494.140"))
+    plugins.set(listOf("JavaScript", "com.intellij.css", "less", "sass", "org.jetbrains.plugins.stylus:242.20224.155"))
 }
 
 repositories {
